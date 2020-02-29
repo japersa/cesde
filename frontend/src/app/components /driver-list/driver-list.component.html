@@ -1,0 +1,46 @@
+<div class="container wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Conductores</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="float-right">
+            <a class="btn btn-primary" routerLink="/add-driver">Nuevo</a>
+          </div>
+        </div>
+      </div>
+      <div class="inner">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Documento de identidad</th>
+              <th scope="col">Fecha de nacimiento</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Celular</th>
+              <th scope="col">Dirección</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let driver of driverList">
+              <th scope="row">{{ driver.id }}</th>
+              <td>{{ driver.firstName }}</td>
+              <td>{{ driver.lastName }}</td>
+              <td>{{ driver.identification }}</td>
+              <td>{{ driver.birthday }}</td>
+              <td>{{ driver.phone }}</td>
+              <td>{{ driver.mobile }}</td>
+              <td>{{ driver.address }}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

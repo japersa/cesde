@@ -1,7 +1,7 @@
 import { Table, Column, Model } from 'sequelize-typescript';
 
 @Table
-export class User extends Model<User> {
+export class Driver extends Model<Driver> {
   @Column firstName: string;
   @Column lastName: string;
   @Column identification: string;
