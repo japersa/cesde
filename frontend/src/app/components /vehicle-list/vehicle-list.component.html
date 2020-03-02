@@ -1,0 +1,36 @@
+<div class="container wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Vehiculos</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="float-right">
+            <a class="btn btn-primary" routerLink="/add-vehicle">Nuevo</a>
+          </div>
+        </div>
+      </div>
+      <div class="inner">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Placa</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Modelo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let vehicle of vehicleList">
+              <th scope="row">{{ vehicle.id }}</th>
+              <td>{{ vehicle.number_plate }}</td>
+              <td>{{ vehicle.brand }}</td>
+              <td>{{ vehicle.model }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

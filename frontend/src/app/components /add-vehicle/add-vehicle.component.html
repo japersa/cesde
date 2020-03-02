@@ -1,0 +1,26 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Nuevo Vehiculo</h3>
+      <form [formGroup]="vehicleForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="form-group">
+          <label for="firstName">Placa</label>
+          <input
+            type="text"
+            formControlName="number_plate"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Marca</label>
+          <input type="text" formControlName="brand" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="identification">Modelo</label>
+          <input type="text" formControlName="model" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
