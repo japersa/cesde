@@ -10,12 +10,12 @@ export class VehicleListComponent {
   vehicleList: any = [];
 
   ngOnInit() {
-    this.loadDrivers();
+    this.loadVehicles();
   }
 
   constructor(public vehicleService: VehicleService) {}
 
-  loadDrivers() {
+  loadVehicles() {
     return this.vehicleService.getVehicles().subscribe((data: {}) => {
       this.vehicleList = data;
     });

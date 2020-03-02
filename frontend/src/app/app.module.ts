@@ -9,6 +9,8 @@ import { DriverListComponent } from "./components /driver-list/driver-list.compo
 import { AddDriverComponent } from "./components /add-driver/add-driver.component";
 import { AddVehicleComponent } from "./components /add-vehicle/add-vehicle.component";
 import { VehicleListComponent } from "./components /vehicle-list/vehicle-list.component";
+import { AddTravelComponent } from "./components /add-travel/add-travel.component";
+import { TravelListComponent } from "./components /travel-list/travel-list.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { VehicleListComponent } from "./components /vehicle-list/vehicle-list.co
     DriverListComponent,
     AddDriverComponent,
     AddVehicleComponent,
-    VehicleListComponent
+    VehicleListComponent,
+    AddTravelComponent,
+    TravelListComponent
   ],
   imports: [
     BrowserModule,

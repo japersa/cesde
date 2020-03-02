@@ -1,0 +1,63 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Nuevo Viaje</h3>
+      <form [formGroup]="travelForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="form-group">
+          <label for="driver" class="control-label">Conductor</label>
+          <select
+            formControlName="driverId"
+            class="form-control"
+            name="driver"
+            id="driver"
+          >
+            <option *ngFor="let driver of driverList" value="{{ driver.id }}"
+              >{{ driver.firstName }} {{ driver.lastName }}</option
+            >
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="driver" class="control-label">Vehiculo</label>
+          <select
+            formControlName="vehicleId"
+            class="form-control"
+            name="vehicle"
+            id="vehicle"
+          >
+            <option
+              *ngFor="let vehicle of vehicleList"
+              value="{{ vehicle.id }}"
+              >{{ vehicle.number_plate }}</option
+            >
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="number_services">Numero de servicios</label>
+          <input
+            type="text"
+            formControlName="number_services"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="money_raised">Dinero recaudado</label>
+          <input
+            type="text"
+            formControlName="money_raised"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="travel_date">Fecha del viaje</label>
+          <input
+            type="date"
+            formControlName="travel_date"
+            class="form-control"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

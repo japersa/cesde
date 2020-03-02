@@ -5,6 +5,8 @@ import { DriverListComponent } from "./components /driver-list/driver-list.compo
 import { AddDriverComponent } from "./components /add-driver/add-driver.component";
 import { VehicleListComponent } from "./components /vehicle-list/vehicle-list.component";
 import { AddVehicleComponent } from "./components /add-vehicle/add-vehicle.component";
+import { AddTravelComponent } from "./components /add-travel/add-travel.component";
+import { TravelListComponent } from "./components /travel-list/travel-list.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/driver-list", pathMatch: "full" },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: "add-driver", component: AddDriverComponent },
   { path: "vehicle-list", component: VehicleListComponent },
   { path: "add-vehicle", component: AddVehicleComponent },
+  { path: "add-travel", component: AddTravelComponent },
+  { path: "travel-list", component: TravelListComponent },
   { path: "**", component: NoPageFoundComponent }
 ];
 

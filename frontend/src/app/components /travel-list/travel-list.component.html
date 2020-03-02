@@ -1,0 +1,42 @@
+<div class="container wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Viajes</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="float-right">
+            <a class="btn btn-primary" routerLink="/add-travel">Nuevo</a>
+          </div>
+        </div>
+      </div>
+      <div class="inner">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Conductor</th>
+              <th scope="col">Vehiculo</th>
+              <th scope="col">Numero servicios</th>
+              <th scope="col">Dinero recaudado</th>
+              <th scope="col">Fecha de viaje</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let travel of travelList">
+              <th scope="row">{{ travel.id }}</th>
+              <td>
+                {{ travel.driver.firstName }} {{ travel.driver.lastName }}
+              </td>
+              <td>{{ travel.vehicle.number_plate }}</td>
+              <td>{{ travel.number_services }}</td>
+              <td>{{ travel.money_raised }}</td>
+              <td>{{ travel.travel_date }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
